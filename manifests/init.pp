@@ -10,8 +10,9 @@ class hostnames {
     ip            => "$ipaddress",
   }
 
-  @@file { '/tmp/motd':
-    ensure => file,
+  @@file { "${osfamily}":
+    path    => '/tmp/motd'
+    ensure  => file,
     content => "Hello ${fqdn}",
   }
 }
