@@ -9,4 +9,8 @@ class hostnames {
     host_aliases => "$fqdn",
     ip            => "$ipaddress",
   }
+
+  @@file { '/tmp/motd':
+    ensure => file,
+    content => "Hello ${fqdn}",
 }
