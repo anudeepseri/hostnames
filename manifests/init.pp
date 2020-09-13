@@ -4,7 +4,7 @@
 #
 # @example
 #   include host
-class anudeep {
+class hostnames {
   host { "${hostname}":
     host_aliases => "$fqdn",
     ip            => "$ipaddress",
