@@ -13,4 +13,5 @@ class hostnames {
   @@file { '/tmp/motd':
     ensure => file,
     content => "Hello ${fqdn}",
+  }
 }
